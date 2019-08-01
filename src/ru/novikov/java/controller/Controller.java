@@ -1,12 +1,12 @@
 package ru.novikov.java.controller;
 
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Pane;
+import javafx.scene.image.ImageView;
+
+import java.awt.event.MouseEvent;
 
 public class Controller {
 
@@ -14,22 +14,30 @@ public class Controller {
     private TextField mBlud, mChash, mChashAndObr, procOpen, drySubs, mDry,
             calcDrySubs, zola, aminCarbo, jMd, pJ, sMd, aminUmd, kmd, sF, jF, aminUf, kF;
     @FXML
-    private Button firstCalc, secondCalc, thirdCalc, clear;
+    private Button  calc, insertData, clear, exit;
 
     @FXML
-    public void firstCalcAct(ActionEvent event){
-        //mBlud.getText();
-    }
+    private ImageView secret;
+
     @FXML
-    public void secondCalcAct(ActionEvent event){
+    public void insertDataAct(ActionEvent event){
 
     }
     @FXML
-    public void thirdCalcAct(ActionEvent event){
+    public void calcAct(ActionEvent event){
 
     }
     @FXML
     public void clearAct(ActionEvent event){
 
+    }
+
+    @FXML
+    public void secretAct (ActionEvent event){
+    }
+
+    @FXML
+    public void exitAct(ActionEvent event){
+        System.exit(0);
     }
 }
