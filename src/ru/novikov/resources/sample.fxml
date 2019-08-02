@@ -14,7 +14,7 @@
 
 <AnchorPane id="privet" maxHeight="452.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="489.0" prefHeight="407.0" prefWidth="496.0" style="-fx-background-color: #D5D8DC;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.novikov.java.controller.Controller">
    <children>
-      <Pane layoutX="4.0" layoutY="28.0" prefHeight="158.0" prefWidth="192.0" style="-fx-border-color: #EAECEE;" AnchorPane.leftAnchor="4.0">
+      <Pane layoutX="4.0" layoutY="28.0" prefHeight="217.0" prefWidth="192.0" style="-fx-border-color: #EAECEE;" AnchorPane.leftAnchor="4.0">
          <children>
             <TextField fx:id="mChash" layoutX="98.0" layoutY="46.0" prefHeight="25.0" prefWidth="75.0" promptText="0.0" />
             <Label layoutX="9.0" layoutY="15.0" text="Масса блюда:" />
@@ -24,6 +24,10 @@
             <TextField fx:id="mBlud" layoutX="98.0" layoutY="11.0" prefHeight="25.0" prefWidth="75.0" promptText="0.0" />
             <Label layoutX="43.0" layoutY="119.0" text="\%откр.:" />
             <TextField fx:id="procOpen" layoutX="98.0" layoutY="115.0" prefHeight="25.0" prefWidth="75.0" promptText="0.0" />
+            <TextField fx:id="density" layoutX="98.0" layoutY="147.0" prefHeight="25.0" prefWidth="75.0" promptText="0.0" />
+            <Label layoutX="24.0" layoutY="151.0" text="Плотность:" />
+            <Label layoutX="54.0" layoutY="183.0" text="Соль:" />
+            <TextField fx:id="salt" layoutX="98.0" layoutY="179.0" prefHeight="25.0" prefWidth="75.0" promptText="0.0" />
          </children>
       </Pane>
       <Pane prefHeight="25.0" prefWidth="501.0" style="-fx-background-color: #34495E;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
@@ -35,14 +39,14 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="4.0" layoutY="190.0" prefHeight="180.0" prefWidth="192.0" style="-fx-border-color: #EAECEE;">
+      <Pane layoutX="4.0" layoutY="248.0" prefHeight="118.0" prefWidth="192.0" style="-fx-border-color: #EAECEE;">
          <children>
-            <Button fx:id="clear" layoutX="134.0" layoutY="149.0" mnemonicParsing="false" onAction="#clearAct" text="Сброс" />
-            <Label layoutX="23.0" layoutY="22.0" text="Сух в-ва:" />
-            <Label layoutX="12.0" layoutY="50.0" text="Масса сух.:" />
-            <TextField fx:id="drySubs" layoutX="81.0" layoutY="18.0" prefHeight="25.0" prefWidth="76.0" promptText="0.0" />
-            <TextField fx:id="mDry" layoutX="81.0" layoutY="46.0" prefHeight="25.0" prefWidth="76.0" promptText="0.0" />
-            <Button fx:id="insertData" layoutX="60.0" layoutY="90.0" mnemonicParsing="false" onAction="#insertDataAct" text="Внести данные" />
+            <Button fx:id="clear" layoutX="8.0" layoutY="83.0" mnemonicParsing="false" onAction="#clearAct" text="Сброс" />
+            <Label layoutX="33.0" layoutY="14.0" text="Сух в-ва:" />
+            <Label layoutX="23.0" layoutY="50.0" text="Масса сух.:" />
+            <TextField fx:id="drySubs" layoutX="96.0" layoutY="10.0" prefHeight="25.0" prefWidth="76.0" promptText="0.0" />
+            <TextField fx:id="mDry" layoutX="96.0" layoutY="46.0" prefHeight="25.0" prefWidth="76.0" promptText="0.0" />
+            <Button fx:id="insertData" layoutX="85.0" layoutY="83.0" mnemonicParsing="false" onAction="#insertDataAct" text="Внести данные" />
          </children>
       </Pane>
       <Pane layoutX="200.0" layoutY="28.0" prefHeight="342.0" prefWidth="291.0" style="-fx-border-color: #EAECEE;">
