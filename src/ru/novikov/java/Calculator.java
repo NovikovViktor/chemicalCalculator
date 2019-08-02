@@ -14,6 +14,8 @@ public class Calculator {
     private BigDecimal mChash;
     private BigDecimal mChashAndObr;
     private BigDecimal procOpen;
+    private BigDecimal density;
+    private BigDecimal salt;
     private List<BigDecimal> drySubsList = new ArrayList<>();
     private List<BigDecimal> mDryList = new ArrayList<>();
 

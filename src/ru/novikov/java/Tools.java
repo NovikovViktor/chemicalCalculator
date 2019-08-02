@@ -1,6 +1,9 @@
 package ru.novikov.java;
 
 import javafx.scene.control.Alert;
+import javafx.scene.control.TextField;
+
+import java.math.BigDecimal;
 
 public class Tools {
 
@@ -12,11 +15,19 @@ public class Tools {
         alert.showAndWait();
         return;
     }
+
     public void alertClearList(){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Сброс");
         alert.setHeaderText("Данные по сухим веществам очищены");
         alert.showAndWait();
         return;
+    }
+
+    public String formatReplaceTrim(TextField textField){
+        return textField.getText().trim().replaceAll("[^\\d.]", "");
+    }
+    public BigDecimal parseStringToBigDecimal(String str){
+        return BigDecimal.valueOf(Double.parseDouble(str.replaceAll(",",".")));
     }
 }

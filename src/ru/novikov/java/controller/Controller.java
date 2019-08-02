@@ -8,7 +8,6 @@ import javafx.scene.image.ImageView;
 import ru.novikov.java.Calculator;
 import ru.novikov.java.Tools;
 
-import java.math.BigDecimal;
 
 public class Controller {
 
@@ -27,21 +26,15 @@ public class Controller {
     @FXML
     public void insertDataAct(ActionEvent event) {
 
-        String drySubsStr = drySubs.getText().trim().replaceAll("[^\\d.]", "");
-        String mDryStr = mDry.getText().trim().replaceAll("[^\\d.]", "");
+        String drySubsStr = tools.formatReplaceTrim(drySubs);
+        String mDryStr = tools.formatReplaceTrim(mDry);
 
         if(drySubsStr.equals("") || mDryStr.equals("")){
             tools.alertEmptyCell();
             return;
         }
-        data.getDrySubsList().add(
-                BigDecimal.valueOf(
-                        Double.parseDouble(
-                                drySubsStr.replaceAll(",","."))));
-        data.getMDryList().add(
-                BigDecimal.valueOf(
-                        Double.parseDouble(
-                                mDryStr.replaceAll(",","."))));
+        data.getDrySubsList().add(tools.parseStringToBigDecimal(drySubsStr));
+        data.getMDryList().add(tools.parseStringToBigDecimal(mDryStr));
         drySubs.setText("");
         mDry.setText("");
     }
@@ -49,6 +42,26 @@ public class Controller {
     @FXML
     public void calcAct(ActionEvent event) {
 
+        String mBludStr = tools.formatReplaceTrim(mBlud);
+        String mChashStr = tools.formatReplaceTrim(mChash);
+        String mChashAndObrStr = tools.formatReplaceTrim(mChashAndObr);
+        String procOpenStr = tools.formatReplaceTrim(procOpen);
+        String densityStr = tools.formatReplaceTrim(density);
+        String saltStr = tools.formatReplaceTrim(salt);
+
+        if(mBludStr.equals("")||mChashStr.equals("")||mChashAndObrStr.equals("")||
+                procOpenStr.equals("")||densityStr.equals("")||saltStr.equals("")){
+            tools.alertEmptyCell();
+            return;
+        }
+        data.setMBlud(tools.parseStringToBigDecimal(mBludStr));
+        data.setMChash(tools.parseStringToBigDecimal(mChashStr));
+        data.setMChashAndObr(tools.parseStringToBigDecimal(mChashAndObrStr));
+        data.setProcOpen(tools.parseStringToBigDecimal(procOpenStr));
+        data.setDensity(tools.parseStringToBigDecimal(densityStr));
+        data.setSalt(tools.parseStringToBigDecimal(saltStr));
+
+        data.calculate();
     }
 
     @FXML
