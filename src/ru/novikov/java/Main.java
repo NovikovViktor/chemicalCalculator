@@ -23,7 +23,7 @@ public class Main extends Application {
                 primaryStage.setY(event.getScreenY() + yOffset);
         });
         primaryStage.setTitle("Chemical calculator");
-        primaryStage.setScene(new Scene(root, 496, 407));
+        primaryStage.setScene(new Scene(root, 496, 498));
 
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setResizable(false);
