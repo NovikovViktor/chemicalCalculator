@@ -13,7 +13,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/ru/novikov/resources/sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../resources/sample.fxml"));
         root.setOnMousePressed((event) ->{
                 xOffset = primaryStage.getX() - event.getScreenX();
                 yOffset = primaryStage.getY() - event.getScreenY();
