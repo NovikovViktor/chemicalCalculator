@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="chemicalCalculator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/chemicalCalculator_jar</output-path>
+    <root id="archive" name="chemicalCalculator.jar">
+      <element id="module-output" name="chemicalCalculator" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../Lib/lombok.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
